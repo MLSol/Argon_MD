@@ -189,26 +189,22 @@ P_var = np.var(P_m)
 
 
 #Figures
-fig = plt.figure()
-plt.plot(rhist, g)
+fig = plt.figure(figsize=(8,6))
+plt.plot(rhist, g, linewidth=2.0)
+plt.ylabel('g(r)',fontsize=18)
+plt.xlabel('r ($\sigma$)',fontsize=18)
+plt.tick_params(axis='both',which='major',labelsize=18)
+plt.grid()
 plt.show()
 
 ti=np.linspace(0,steps*dt,steps)
 
-fig = plt.figure()
+fig = plt.figure(figsize=(8,6))
 plt.plot(ti, 2*Ekin/(3*N))
-plt.show()    
+plt.show()     
 
 #Output
 print('T = ',T,'density = ', den)
 print('P = ' ,P,'+-',2*sqrt(P_var))
 print('Cv = ' ,Cv,'+-',2*sqrt(Cv_var))
-
-#pp=[7.184 , 3.713 , 2.739 , 1.560 , 1.109]
-#denp=[1/1.0 , 1/0.8 , 1/0.7 , 1/0.5 , 1/0.3]
-#
-#
-#fig = plt.figure()
-#plt.plot(denp, pp)
-#plt.show()
 
