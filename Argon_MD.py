@@ -13,8 +13,8 @@ import time
 import random
 from math import sqrt, pi
 
-T=0.8    #Temperature
-den=0.7 #density
+T=1.0    #Temperature
+den=0.88 #density
 N=864    #Number of particles
 dt=4e-3     #size timestep
 steps=5000  #Number of timesteps
